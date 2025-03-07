@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animação de SVGs</title>
+    <style>
+        /* Estilo para o container que vai segurar os SVGs */
+        .svg-container {
+            position: relative;
+            width:  500px;
+            height: 500px;
+        }
+
+        /* Estilo para os SVGs */
+        .svg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Animação de rotação no sentido horário */
+        .rotate-clockwise {
+            animation: rotate-clockwise 10s linear infinite;
+        }
+
+        /* Animação de rotação no sentido anti-horário */
+        .rotate-counterclockwise {
+            animation: rotate-counterclockwise 10s linear infinite;
+        }
+
+        /* Keyframes para rotação no sentido horário */
+        @keyframes rotate-clockwise {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* Keyframes para rotação no sentido anti-horário */
+        @keyframes rotate-counterclockwise {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="svg-container">
+        <!-- SVG que gira no sentido horário -->
+        <object class="svg rotate-clockwise" data="Fib1.svg" type="image/svg+xml"></object>
+
+        <!-- SVG que gira no sentido anti-horário -->
+        <object class="svg rotate-counterclockwise" data="Fib2.svg" type="image/svg+xml"></object>
+    </div>
+
+</body>
+</html>
