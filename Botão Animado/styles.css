@@ -1,0 +1,58 @@
+/* Resetando margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo o estilo do corpo */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+/* Estilo do container */
+.container {
+    text-align: center;
+}
+
+/* Estilo do botão */
+.animated-button {
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    background: linear-gradient(45deg, #ff6ec7, #ff9a8b, #f2c2f2, #ff6ec7);
+    background-size: 400% 400%;
+    animation: gradientAnimation 5s ease infinite;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Animação de fundo para o botão */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Efeito de brilho e mudança de cor ao passar o mouse */
+.animated-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.7);
+    color: #ff6ec7;
+    border-color: #ff6ec7;
+}
