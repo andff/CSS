@@ -1,0 +1,58 @@
+/* Resetando margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo do vídeo de fundo */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Faz com que o vídeo fique atrás do conteúdo */
+    overflow: hidden;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir toda a área da tela sem distorção */
+}
+
+/* Estilo do conteúdo centralizado */
+.content {
+    text-align: center;
+    color: white;
+    z-index: 1; /* Faz com que o conteúdo fique sobre o vídeo */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo transparente com opacidade */
+    border-radius: 10px;
+    max-width: 600px;
+    width: 80%;
+}
+
+/* Ajustes de responsividade para o texto */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
